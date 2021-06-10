@@ -1,11 +1,9 @@
-#ifndef _STDIO_H
-    #define _STDIO_H_
-    #include <stdio.h>
-#endif
-#ifndef _STDLIB_H
-    #define _STDLIB_H_
-    #include <stdlib.h>
-#endif
+
+#ifndef __GLTHREAD__
+#define __GLTHREAD__
+
+#include <stdio.h>
+#include <stdlib.h>
 
 #define offsetof(struct_name, field_name) (unsigned int)&((struct_name*)0)->field_name
 
@@ -25,4 +23,6 @@ void init_glthread(glthread_t *glist, unsigned int offset);
 void glthread_add(glthread_t *glist, glthread_node_t *glnode);
 
 void glthread_remove(glthread_t *glist, glthread_node_t *glnode);
+
+#endif
 
